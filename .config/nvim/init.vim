@@ -39,6 +39,7 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
     
     Plug 'preservim/nerdcommenter'
+    Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
@@ -60,3 +61,4 @@ colorscheme onedark
 filetype plugin on
 
 noremap <silent> <C-f> :Rg<CR>
+let g:indentLine_char = '│' "'┊'
