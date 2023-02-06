@@ -18,11 +18,18 @@ zstyle ':omz:update' mode disabled  # disable automatic updates
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git colored-man-pages kubectl tmux)
+plugins=(git colored-man-pages kubectl tmux virtualenv)
 
-ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART=false
 ZSH_TMUX_AUTOCONNECT=false
 
 source $ZSH/oh-my-zsh.sh
 
 EDITOR=v
+PATH=$PATH:$HOME/.local/bin
+
+#export PYENV_ROOT="$HOME/.pyenv"
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
+

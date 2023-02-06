@@ -14,11 +14,12 @@ set wildmode=longest,list   " get bash-like tab completions
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
-set mousescroll=ver:2,hor:2
+"set mousescroll=ver:2,hor:2
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 set noswapfile            " disable creating swap file
+set nowrap
 
 call plug#begin()
     Plug 'joshdick/onedark.vim'
