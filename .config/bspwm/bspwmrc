@@ -1,22 +1,21 @@
 #! /bin/sh
 
 sxhkd &
-betterlockscreen --lock
-setxkbmap -layout 'us,cz,ru(phonetic)'
-feh --no-fehbg --bg-fill .config/bg2.jpg
+#betterlockscreen --lock
+#setxkbmap -option grp:alt_shift_toggle 'us,cz,ru(phonetic)'
+setxkbmap -option grp:alt_shift_toggle 'us,cz'
+feh --no-fehbg --bg-fill .config/bg10.png
 
-picom --daemon -c
+picom --daemon -c --backend glx
 #pulseaudio --start
 
 kill "$(pidof polybar)"
 polybar barrr --quiet --reload &
 
-bspc monitor eDP1 -d I II III IV V VI VII VIII IX X
-bspc monitor DP1 -d I II III IV V VI VII VIII IX X
-bspc monitor DP2 -d I II III IV V VI VII VIII IX X
+bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
+#bspc monitor DP-1 -d I II III IV V VI VII VIII IX X
+#bspc monitor DP-2 -d I II III IV V VI VII VIII IX X
 
-#bspc config border_width                2
-#bspc config window_gap                  18
 bspc config border_width                0
 bspc config window_gap                  0
 bspc config single_monocle              true
@@ -30,5 +29,5 @@ bspc config focus_follows_pointer true
 bspc rule -a 'Gpick' state=floating
 bspc rule -a 'Pavucontrol' state=floating
 bspc rule -a 'feh' state=floating
-bspc rule -a 'Matplotlib' state=floating
-bspc rule -a 'GNU Octave' state=floating
+#bspc rule -a 'Matplotlib' state=floating
+#bspc rule -a 'GNU Octave' state=floating

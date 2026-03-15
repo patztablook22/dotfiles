@@ -1,5 +1,5 @@
 #!/bin/sh
 
-bspc rule -r 'Alacritty'
+bspc rule -r 'Alacritty:*:*'
 exec zsh
 
